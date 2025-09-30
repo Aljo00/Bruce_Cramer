@@ -1,3 +1,5 @@
+import logo from "../assets/bruce-cramer-about.webp"
+
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
@@ -8,7 +10,7 @@ export default function HeroSection() {
             <div className="inline-block">
               <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden border-4 border-white shadow-xl">
                 <img
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src={logo}
                   alt="Bruce Cramer, Business Coach"
                   className="w-full h-full object-cover"
                 />

@@ -23,9 +23,12 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand Section */}
             <div className="lg:col-span-2">
-              <h3 className="text-2xl font-bold gradient-text mb-4">Bruce Cramer</h3>
+              <h3 className="text-2xl font-bold gradient-text mb-4">
+                Bruce Cramer
+              </h3>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Transformational business coach helping leaders scale their businesses profitably while achieving work-life balance.
+                Transformational business coach helping leaders scale their
+                businesses profitably while achieving work-life balance.
               </p>
               <div className="flex space-x-4">
                 <a
@@ -87,12 +90,9 @@ export default function Footer() {
               © 2025 Bruce Cramer. All Rights Reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </a>
+              <p className="text-gray-400 text-sm mb-4 sm:mb-0">
+                Designed with ❤️ for excellence
+              </p>
             </div>
           </div>
         </div>

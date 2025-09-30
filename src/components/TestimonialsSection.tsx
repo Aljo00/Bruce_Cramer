@@ -1,30 +1,24 @@
-import { Quote, Star } from "lucide-react";
+import { Quote, Star, User2 } from "lucide-react";
 
 export default function TestimonialsSection() {
   const testimonials = [
     {
       text: "I cannot recommend Bruce enough... words really don't do justice to the incredible impact he's had on both my professional and personal growth.",
-      author: "Sarah M.",
-      title: "CEO, Tech Startup",
+      author: "Current Client",
+      title: " ",
       rating: 5,
-      image:
-        "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=150",
     },
     {
       text: "What sets Bruce apart is how everything is broken down into clear, actionable steps on a weekly basis. That structure is the reason it works.",
-      author: "Michael R.",
-      title: "Manufacturing Director",
+      author: "Current Client",
+      title: "",
       rating: 5,
-      image:
-        "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150",
     },
     {
       text: "Bruce is the coach who has been there and done that. He's the real deal.",
       author: "Danny P. Creed",
       title: "Top 10 Transformational Coach, Globally",
       rating: 5,
-      image:
-        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150",
     },
   ];
 
@@ -74,12 +68,8 @@ export default function TestimonialsSection() {
 
               {/* Author Info */}
               <div className="flex items-center justify-center space-x-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gradient-start/20">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.author}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-12 h-12 rounded-full flex items-center justify-center bg-gradient-primary/10 border-2 border-gradient-start/20">
+                  <User2 className="w-6 h-6 text-gradient-start" />
                 </div>
                 <div className="text-center">
                   <div className="font-semibold text-gray-900">

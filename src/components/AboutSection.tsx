@@ -1,3 +1,5 @@
+import about_logo from "../assets/Bruce-J-Cramer-1.webp"
+
 export default function AboutSection() {
   const bioPoints = [
     "With over 45 years of experience in leadership development and corporate growth, I'm a seasoned executive, transformational leader, and growth scaling strategist.",
@@ -13,7 +15,7 @@ export default function AboutSection() {
           <div>
             <div className="aspect-[4/3] bg-gray-200 rounded-lg overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800"
+                src={about_logo}
                 alt="Bruce Cramer speaking at an event"
                 className="w-full h-full object-cover"
               />
