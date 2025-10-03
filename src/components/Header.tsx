@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,8 +10,8 @@ export default function Header() {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navLinks = [
@@ -19,7 +19,6 @@ export default function Header() {
     { text: "About", href: "#about" },
     { text: "The Method", href: "#method" },
     { text: "Testimonials", href: "#testimonials" },
-    { text: "Contact", href: "#contact" }
   ];
 
   const handleLinkClick = () => {
@@ -27,20 +26,25 @@ export default function Header() {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-md' : 'bg-white/90 backdrop-blur-sm'
-    }`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white shadow-md" : "bg-white/90 backdrop-blur-sm"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a href="#" className="text-xl sm:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity">
+            <a
+              href="#"
+              className="text-xl sm:text-2xl font-bold gradient-text hover:opacity-80 transition-opacity"
+            >
               Bruce Cramer
             </a>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-6">
             {navLinks.map((link) => (
               <a
                 key={link.text}
@@ -50,6 +54,17 @@ export default function Header() {
                 {link.text}
               </a>
             ))}
+
+            {/* External Contact Button */}
+            <a
+              href="https://www.brucecramer.com/contact"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-4 inline-flex items-center gap-2 px-4 py-2 bg-gradient-primary text-white rounded-md shadow hover:opacity-95 transition-opacity duration-150"
+            >
+              Contact
+              <ArrowRight size={16} />
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -78,6 +93,15 @@ export default function Header() {
                   {link.text}
                 </a>
               ))}
+              <a
+                href="https://www.brucecramer.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleLinkClick}
+                className="block px-3 py-2 mt-2 text-white bg-gradient-primary rounded-md text-center font-medium"
+              >
+                Contact
+              </a>
             </div>
           </div>
         )}

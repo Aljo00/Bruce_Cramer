@@ -1,43 +1,52 @@
-import { Phone, Mail, Linkedin } from 'lucide-react';
+import { Phone, Mail, Linkedin, Globe } from "lucide-react";
 
 export default function ContactSection() {
   const steps = [
     {
       step: 1,
       title: "Introductions (10-15 mins)",
-      description: "A quick call to introduce ourselves and see if there's a good vibe and mutual fit."
+      description:
+        "A quick call to introduce ourselves and see if there's a good vibe and mutual fit.",
     },
     {
       step: 2,
       title: "Discovery Call (20-30 mins)",
-      description: "We'll dive a little deeper into your business goals, challenges, and opportunities."
+      description:
+        "We'll dive a little deeper into your business goals, challenges, and opportunities.",
     },
     {
       step: 3,
       title: "Strategic Business Review (60-90 mins)",
-      description: "See me in action as I share initial insights and ideas tailored to your business."
-    }
+      description:
+        "See me in action as I share initial insights and ideas tailored to your business.",
+    },
   ];
 
   const contactDetails = [
-    { 
-      type: "Phone", 
-      value: "+1-262-945-5057", 
+    {
+      type: "Phone",
+      value: "+1-262-945-5057",
       href: "tel:+1-262-945-5057",
-      icon: Phone
+      icon: Phone,
     },
-    { 
-      type: "Email", 
-      value: "bcramer@focalpointcoaching.com", 
+    {
+      type: "Website contact",
+      value: "brucecramer.com/contact",
+      href: "https://www.brucecramer.com/contact",
+      icon: Globe,
+    },
+    {
+      type: "Email",
+      value: "bcramer@focalpointcoaching.com",
       href: "mailto:bcramer@focalpointcoaching.com",
-      icon: Mail
+      icon: Mail,
     },
-    { 
-      type: "LinkedIn", 
-      value: "linkedin.com/in/bruce-j-cramer", 
+    {
+      type: "LinkedIn",
+      value: "linkedin.com/in/bruce-j-cramer",
       href: "http://www.linkedin.com/in/bruce-j-cramer",
-      icon: Linkedin
-    }
+      icon: Linkedin,
+    },
   ];
 
   return (
@@ -48,7 +57,8 @@ export default function ContactSection() {
             Ready for Real Growth?
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-gray-600">
-            Let's start a conversation. No pressure, no obligation... just a clear path forward.
+            Let's start a conversation. No pressure, no obligation... just a
+            clear path forward.
           </p>
         </div>
 
@@ -60,7 +70,10 @@ export default function ContactSection() {
             </h3>
             <div className="space-y-6">
               {steps.map((step, index) => (
-                <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+                <div
+                  key={index}
+                  className="flex items-start space-x-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm"
+                >
                   <div className="flex-shrink-0 w-10 h-10 bg-gradient-primary text-white rounded-full flex items-center justify-center font-bold text-sm">
                     {step.step}
                   </div>
@@ -95,7 +108,9 @@ export default function ContactSection() {
                       <IconComponent className="text-white" size={20} />
                     </div>
                     <div>
-                      <div className="text-xs sm:text-sm text-gray-500">{detail.type}</div>
+                      <div className="text-xs sm:text-sm text-gray-500">
+                        {detail.type}
+                      </div>
                       <div className="text-sm sm:text-base md:text-lg text-gray-900 group-hover:text-gradient-start transition-colors">
                         {detail.value}
                       </div>
